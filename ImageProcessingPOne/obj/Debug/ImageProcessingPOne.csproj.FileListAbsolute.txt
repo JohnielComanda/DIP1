@@ -1,0 +1,11 @@
+C:\Users\Johniel\Desktop\Local Programs\ImageProcessingPOne\ImageProcessingPOne\bin\Debug\ImageProcessingPOne.exe.config
+C:\Users\Johniel\Desktop\Local Programs\ImageProcessingPOne\ImageProcessingPOne\bin\Debug\ImageProcessingPOne.exe
+C:\Users\Johniel\Desktop\Local Programs\ImageProcessingPOne\ImageProcessingPOne\bin\Debug\ImageProcessingPOne.pdb
+C:\Users\Johniel\Desktop\Local Programs\ImageProcessingPOne\ImageProcessingPOne\obj\Debug\ImageProcessingPOne.csproj.AssemblyReference.cache
+C:\Users\Johniel\Desktop\Local Programs\ImageProcessingPOne\ImageProcessingPOne\obj\Debug\ImageProcessingPOne.csproj.SuggestedBindingRedirects.cache
+C:\Users\Johniel\Desktop\Local Programs\ImageProcessingPOne\ImageProcessingPOne\obj\Debug\ImageProcessingPOne.Form1.resources
+C:\Users\Johniel\Desktop\Local Programs\ImageProcessingPOne\ImageProcessingPOne\obj\Debug\ImageProcessingPOne.Properties.Resources.resources
+C:\Users\Johniel\Desktop\Local Programs\ImageProcessingPOne\ImageProcessingPOne\obj\Debug\ImageProcessingPOne.csproj.GenerateResource.cache
+C:\Users\Johniel\Desktop\Local Programs\ImageProcessingPOne\ImageProcessingPOne\obj\Debug\ImageProcessingPOne.csproj.CoreCompileInputs.cache
+C:\Users\Johniel\Desktop\Local Programs\ImageProcessingPOne\ImageProcessingPOne\obj\Debug\ImageProcessingPOne.exe
+C:\Users\Johniel\Desktop\Local Programs\ImageProcessingPOne\ImageProcessingPOne\obj\Debug\ImageProcessingPOne.pdb
