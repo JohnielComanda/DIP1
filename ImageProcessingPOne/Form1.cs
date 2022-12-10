@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ImageProcessingPOne
@@ -78,7 +73,6 @@ namespace ImageProcessingPOne
             Bitmap a = (Bitmap)pictureBox1.Image;
             Bitmap b = (Bitmap)pictureBox2.Image;
             
-            //Grayscale Convertion;
             for (int x = 0; x < a.Width; x++)
             {
                 for (int y = 0; y < a.Height; y++)
@@ -90,19 +84,16 @@ namespace ImageProcessingPOne
                 }
             }
 
-            //histogram 1d data;
-            int[] histdata = new int[256]; // array from 0 to 255
+            int[] histdata = new int[256];
             for (int x = 0; x < a.Width; x++)
             {
                 for (int y = 0; y < a.Height; y++)
                 {
                     sample = a.GetPixel(x, y);
-                    histdata[sample.R]++; // can be any color property r,g or b
+                    histdata[sample.R]++;
                 }
             }
 
-            // Bitmap Graph Generation
-            // Setting empty Bitmap with background color
             b = new Bitmap(256, 800);
             for (int x = 0; x < 256; x++)
             {
@@ -111,7 +102,7 @@ namespace ImageProcessingPOne
                     b.SetPixel(x, y, Color.White);
                 }
             }
-            // plotting points based from histdata
+
             for (int x = 0; x < 256; x++)
             {
                 for (int y = 0; y < Math.Min(histdata[x] / 5, b.Height - 1); y++)
@@ -148,6 +139,39 @@ namespace ImageProcessingPOne
                 }
 
             pictureBox2.Image = processed;
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif";
+            saveFileDialog1.Title = "Save an Image File";
+            saveFileDialog1.ShowDialog();
+
+            if (saveFileDialog1.FileName != "")
+            {
+                System.IO.FileStream fs =
+                    (System.IO.FileStream)saveFileDialog1.OpenFile();
+
+                switch (saveFileDialog1.FilterIndex)
+                {
+                    case 1:
+                        pictureBox2.Image.Save(fs,
+                          System.Drawing.Imaging.ImageFormat.Jpeg);
+                        break;
+
+                    case 2:
+                        pictureBox2.Image.Save(fs,
+                          System.Drawing.Imaging.ImageFormat.Bmp);
+                        break;
+
+                    case 3:
+                        pictureBox2.Image.Save(fs,
+                          System.Drawing.Imaging.ImageFormat.Gif);
+                        break;
+                }
+
+                fs.Close();
+            }
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
